@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/editUser.css">
+</head>
+<body>
+    <form id="formulario" method="post">
+        <input type="text" name="name">
+        <input type="text" name="texto">
+        <input type="date" name="Date">
+        <button>Enviar</button>
+    </form>
+    
+    <script>
+        const idUser = window.location.pathname.split('/')[2]
+        const formulario = document.getElementById('formulario')
+        fetch("/api/users/"+idUser)
+        .then((res)=>{
+            return res.json()
+        })
+        .then((data)=>{
+            console.log(data)
+            formulario.action="/api/editUser/"+idUser
+            formulario.name.value = data.name
+            /* formulario.email.value = data.email */
+            formulario.Date.value = data.Date
+            formulario.texto.value = data.texto
+        })
+    </script>
+</body>
+</html>

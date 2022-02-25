@@ -1,0 +1,12 @@
+#formulario{
+    display: grid;
+    /*                      c1 c2  c3  c4 */
+    /* grid-template-columns: 25% 25% 25% 25%; */
+    /*                      c1 c2  c3 */
+    grid-template-columns: 33% 33% 33%;
+    /* grid-template-rows: ; */
+    margin: 50px 20px;
+    background-color: rgb(58, 117, 168);
+    padding: 10px;
+    font-family: sans-serif;
+}

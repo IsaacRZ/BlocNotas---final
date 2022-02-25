@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        .user{
+            margin: 50px 20px;
+            background-color: rgb(58, 117, 168);
+            padding: 10px;
+            font-family: sans-serif;
+        }
+        .user img{
+            width: 50px;
+        }
+        .name{
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style> -->
+    <link rel="stylesheet" href="/style/users.css">
+</head>
+<body>
+    <h1>Mis notas</h1>
+    <a href="/registro">Registrar nueva nota</a>
+    <a href="/">Menú</a>
+    <div id="users">
+
+    </div>
+    
+    <!-- Código que se ejecuta en el navegador  -->
+    <!-- <script>
+        //console.log("Hola Mundo")
+        //Armando la petición
+        /* UTILIZANDO FETCH */
+        fetch("/api/users")
+        .then(function (res){
+            //console.log(res)
+            return res.json()
+        })
+        .then(function(data){
+            var users = document.getElementById("users")
+            //console.log(data) //Data es un arreglo
+            /* users.innerHTML=`
+                <p>Hola</p>
+                <h3>mensaje</h3>
+            ` */
+
+            for(var user of data){
+                users.innerHTML = users.innerHTML + `<div class="user">
+                        <p class = "name">${user.name}</p>
+                        <p>${user.email}</p>
+                        <img src="${user.profile_pic}">
+                    </div>`
+            }
+        })
+    </script> -->
+    <script src="/js/users.js"></script>
+</body>
+</html>

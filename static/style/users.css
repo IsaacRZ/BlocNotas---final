@@ -1,0 +1,33 @@
+/* 
+body{
+   display: flex;
+} */
+.user{
+    /*                      c1 c2  c3  c4 */
+    /* grid-template-columns: 25% 25% 25% 25%; */
+    /*                      c1 c2  c3 */
+    border: 1px solid #ccc;
+
+    /* grid-template-rows: ; */
+    background-color: rgb(58, 117, 168);
+    padding: 8px;
+    margin: 20px;
+    font-family: sans-serif;
+    width: 225px;
+    height: 225px;
+
+
+}
+.name{
+    margin-left: 4px;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 30px;
+}
+.button{
+    padding: 10px;
+}
+.edit{
+    font-size: larger;
+}
